@@ -74,3 +74,14 @@ accuracy.
 Recorded-video evaluation with the real models, 200-image external regression, 37-crop regression, GPU throughput,
 ONNX parity, CPU/GPU baseline-vs-candidate shadow run, Docker image build and compose start, Playwright/browser check
 of the new Review page, engineering-page browser test.
+
+## 2026-11-08 run, cloud Linux container, branch claude/adoring-bohr-pen1ea at fbc0fa4
+| Suite | Passed | Failed | Skipped/xfail | Notes |
+|---|---|---|---|---|
+| edge | 572 | 1 | 3 xfailed | failure: test_svtrv2_experiment (no torchvision in this container; environmental) |
+| backend | 115 | 0 | 0 | |
+| frontend (vitest) | 40 | 0 | 0 | |
+| tools | 29 | 0 | 0 | |
+| frontend typecheck (tsc -b) / build (vite) | ok | | | |
+Not run: Docker/compose-based and GPU runs (no daemon, no GPU), footage.mp4 experiments.
+The 3 xfailed are the experiment-5 findings; each verified to fail on its own assertion with the marker removed.

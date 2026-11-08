@@ -344,3 +344,9 @@ Nothing is pushed. Documents of record: `SENTINEL_BASELINE.md`, `IMPLEMENTATION_
 
 Real-model evaluations and shadow run, sealed Set A and human labels, GPU/CPU benchmarks, tracker comparison, ONNX parity,
 perspective correction, browser verification of the Review page, licence sign-off, per-device credentials.
+
+## 2026-11-08 Stage B continuation (cloud container, unattended)
+- Experiments 1-3 not run: guard code, footage.mp4 and a Docker daemon are absent in this container. No per-frame blocker data exists. See STAGE_B_LOG.md.
+- Local commits a612db9 (engineering-page expected label) and fbc0fa4 (three expected-failure tests) are present, not pushed.
+- Suites re-run once; results in TEST_REPORT.md. No accuracy claim.
+- 2026-11-08 Experiments 1 and 2 re-requested; still blocked (no footage, weights or container runtime here). Docs and the two test commits pushed at the user's request.

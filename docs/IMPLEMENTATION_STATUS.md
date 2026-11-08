@@ -79,3 +79,7 @@ and no independent human labels were available.
 | Performance, ONNX parity, camera-health for recordings, tracker comparison | **Not done / Blocked** |
 | Operational: idempotent delivery, dead letters, audit, access control, retention, dropped-frame counters | Impl+Unit/Integ (dropped-frame counters pre-existing) |
 | Licensing review | Documented; **unresolved** (`RELEASE_READINESS.md`) |
+
+## Stage B status (2026-11-08)
+- Candidate-coverage question (tracks 204, 243, 280): UNRESOLVED in this checkout. Experiments 1-3 blocked (see STAGE_B_LOG.md).
+- Three live-delivery gaps are recorded as expected-failure tests (edge/tests/test_experiment5_findings.py); none is fixed. Proposed future work: (1) persist the live 60 s dedup key in the outbox database; (2) write a masked suppression record (reason, camera, passage, time) to a local table; (3) do not append suppressed partials to the recent-results window.
