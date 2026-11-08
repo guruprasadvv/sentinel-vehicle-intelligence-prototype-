@@ -181,7 +181,7 @@ assert.equal(staleLimit(rec),30);assert.equal(staleLimit({...rec,stale_after_sec
 assert.equal($('session-state').textContent,'RECORDED · <b>Junction A</b> · processing');assert.equal($('session-state').children.length,0,'Recording name must be text, never markup');
 assert.ok($('source-mode').textContent.includes('not a live camera'));assert.ok($('source-mode').textContent.includes('real time unknown'));
 assert.equal($('video-position').textContent,'1:05 / 10:00 · unpaced');assert.equal($('session-id').textContent,'s-1');
-assert.equal($('inference').textContent,'CPU · c2ba896d994b…');
+assert.equal($('inference').textContent,'OCR CPU / vehicles UNKNOWN / plates UNKNOWN · c2ba896d994b…');
 assert.ok($('message').textContent.startsWith('Recorded footage, not a live camera'));assert.equal($('connection-label').textContent,'Recorded inspection');
 assert.equal($('playback-controls').hidden,false);assert.equal($('playback-toggle').textContent,'Pause playback');assert.equal($('playback-toggle').disabled,false);
 $('playback-toggle').listeners.click();await flush();
